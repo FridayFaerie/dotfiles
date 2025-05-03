@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+# aliases
+alias ..="cd .."
+alias ...="cd ../.."
+alias q="exit"
+alias resys="~/.config/scripts/resys.sh"
+alias rehome="~/.config/scripts/rehome.sh"
+alias reek="nh clean all"
+alias relock="hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1' && hyprctl --instance 0 'dispatch exec hyprlock'"
+alias p="nix-shell -p"
+alias nvim="nixCats"
+alias gitlog="git --no-pager log --exclude='refs/notes/*' --all --oneline --graph --show-notes -n 10"
+alias wally="bash ~/.config/scripts/switch_wallpaper.sh"
+alias updatenvim="cd ~/nix-inputs/nixCats && git add . && git commit -m 'updating nixCats' && cd ~/config/ && nix flake update nixCats"
+alias gitac="git add . && git commit -m"
+alias gitconfri="git config --local user.email 'faeriethe@gmail.com' && git config --local user.name 'Friday'"
+alias shl="nix-shell"
+alias ter="cd ~/projects/ternary && shl"
+alias qs="quickshell -p"
+alias record="wf-recorder --pixel-format yuv420p"
+alias notif="notify-send -i ~/home/friday/Downloads/FishMan.png 'New message' 'This is some message. \n\n\n here\'s another paragraph.' -p -h 'string:image-path:/home/friday/.config/wallpapers/a1' -t 3000 -i element"

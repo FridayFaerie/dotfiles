@@ -7,12 +7,16 @@ hyprpaper &
 nm-applet --indicator &
 
 # the bar
-waybar &
+quickshell &
 
 # notifs
+# quickshell -p ~/.config/quickshell/notifs/ &
 swaync &
 
 # idle
 hypridle &
 
-wlsunset -T 6000 &
+hyprsunset -t 4000 &
+
+
+bash ~/.config/scripts/switch_wallpaper.sh s1
