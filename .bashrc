@@ -10,3 +10,5 @@ eval "$(starship init bash)"
 #fortune | clolcat
 #nitch
 clear && leaf
+source /opt/ros/jazzy/setup.bash
+source /home/bun/robotarmpackages2/setup.sh
