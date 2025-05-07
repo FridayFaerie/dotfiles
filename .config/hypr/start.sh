@@ -10,8 +10,8 @@ nm-applet --indicator &
 quickshell &
 
 # notifs
-# quickshell -p ~/.config/quickshell/notifs/ &
-swaync &
+quickshell -p ~/.config/quickshell/notifs/ &
+# swaync &
 
 # idle
 hypridle &
@@ -19,4 +19,4 @@ hypridle &
 hyprsunset -t 4000 &
 
 
-bash ~/.config/scripts/switch_wallpaper.sh s1
+bash ~/.config/scripts/switch_wallpaper.sh g2
