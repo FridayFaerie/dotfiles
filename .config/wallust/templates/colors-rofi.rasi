@@ -27,8 +27,8 @@
 */
 
 * {
-    error-message: #D6D78A;
-    error-message-border: #D6D78A;
+    error-message:               #D6D78A;
+    error-message-border:        #D6D78A;
     selected-normal-foreground:  {{background}};
     foreground:                  {{foreground}};
     normal-foreground:           @foreground;

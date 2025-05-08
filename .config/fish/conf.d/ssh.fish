@@ -1,1 +1,1 @@
-ssh-add ~/.ssh/friday
+ssh-add -q ~/.ssh/friday
