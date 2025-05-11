@@ -14,7 +14,6 @@ require('lze').load {
 
       conform.setup({
         formatters_by_ft = {
-          python = { "isort", "black" },
           -- NOTE: download some formatters in lspsAndRuntimeDeps
           -- and configure them here
           -- lua = { "stylua" },

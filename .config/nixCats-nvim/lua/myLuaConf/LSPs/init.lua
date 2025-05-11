@@ -88,7 +88,7 @@ end
 servers.tinymist = {}
 servers.clangd = {}
 -- servers.gopls = {},
--- servers.pyright = {},
+servers.pyright = {}
 -- servers.rust_analyzer = {},
 -- servers.tsserver = {},
 -- servers.html = { filetypes = { 'html', 'twig', 'hbs'} },

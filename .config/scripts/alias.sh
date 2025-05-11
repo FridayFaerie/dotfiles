@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 
+#stuff from nixos
+alias l='ls -alh'
+alias ll='ls -l'
+alias ls='ls --color=tty'
+
 # aliases
 alias ..="cd .."
 alias ...="cd ../.."
