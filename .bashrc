@@ -11,4 +11,5 @@ eval "$(starship init bash)"
 #nitch
 clear && leaf
 source /opt/ros/jazzy/setup.bash
+cd /home/bun/robotarmpackages2
 source /home/bun/robotarmpackages2/setup.sh
