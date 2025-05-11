@@ -199,14 +199,14 @@ require('lze').load {
       require('Comment').setup()
     end,
   },
-  {
-    "indent-blankline.nvim",
-    for_cat = 'general.extra',
-    event = "DeferredUIEnter",
-    after = function(plugin)
-      require("ibl").setup()
-    end,
-  },
+  -- {
+  --   "indent-blankline.nvim",
+  --   for_cat = 'general.extra',
+  --   event = "DeferredUIEnter",
+  --   after = function(plugin)
+  --     require("ibl").setup()
+  --   end,
+  -- },
   {
     "nvim-surround",
     for_cat = 'general.always',
@@ -288,7 +288,7 @@ require('lze').load {
           -- component_separators = '|',
           -- section_separators = '',
           icons_enabled = true,
-          theme = 'auto',
+          theme = 'neopywal',
           component_separators = { left = '', right = '' },
           section_separators = { left = '', right = '' },
           disabled_filetypes = {
