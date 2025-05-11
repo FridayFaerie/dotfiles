@@ -7,9 +7,6 @@ source ~/.config/scripts/alias.sh
 
 eval "$(starship init bash)"
 
-#fortune | clolcat
-#nitch
 clear && leaf
 source /opt/ros/jazzy/setup.bash
-cd /home/bun/robotarmpackages2
-source /home/bun/robotarmpackages2/setup.sh
+echo -e "\033[0;31mRemember to run 'source setup.sh'\033[0;0m"
