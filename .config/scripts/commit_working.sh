@@ -11,6 +11,8 @@ git merge working --squash &&
 
 git commit -m "${1}" &&
 
+git push &&
+
 git switch working &&
 
 git merge main -m "merged from main"

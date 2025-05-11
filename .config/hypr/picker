@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+echo $XDPH_WINDOW_SHARING_LIST > ~/a
+
+echo "[SELECTION]/screen:eDP-1"

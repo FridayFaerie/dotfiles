@@ -16,4 +16,4 @@ hyprctl hyprpaper reload ,"$wallpaper_path" -q &
 wallust run "$wallpaper_path"
 
 
-# TODO: pywalfox? swaync? nvim? discord?
+# TODO: pywalfox? discord?

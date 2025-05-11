@@ -13,6 +13,14 @@ require('onedark').setup {
 }
 require('onedark').load()
 
+require('neopywal').setup({
+  use_wallust = false,
+  -- colorscheme_file = os.getenv("HOME") .. "/.config/wallust/themes/neopywal.vim"
+  -- transparent_background = false
+})
+-- /home/friday/.cache/wal/colors-wal.vim
+vim.cmd.colorscheme("neopywal")
+
 
 local ok, notify = pcall(require, "notify")
 if ok then
@@ -246,6 +254,20 @@ require('lze').load {
     -- keys = "",
     after = function(plugin)
       require('fidget').setup({})
+    end,
+  },
+  {
+    "hlargs",
+    for_cat = 'general.extra',
+    event = "DeferredUIEnter",
+    -- keys = "",
+    dep_of = { "nvim-lspconfig" },
+    after = function(plugin)
+      require('hlargs').setup {
+        color = '#32a88f',
+      }
+      vim.cmd([[hi clear @lsp.type.parameter]])
+      vim.cmd([[hi link @lsp.type.parameter Hlargs]])
     end,
   },
   {
