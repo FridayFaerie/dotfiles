@@ -5,7 +5,7 @@ git add . &&
 git commit -m 'rebuilding home'
 
 if [[ "$HOME" == "friday" ]]; then
-  nh home switch ~/config
+  nh home switch /home/friday/config --hostname friday
 else
   home-manager switch --flake . --extra-experimental-features nix-command --extra-experimental-features flakes
 fi
