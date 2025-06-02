@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 
-echo $XDPH_WINDOW_SHARING_LIST > ~/.config/hypr/sharinglist
+# echo $XDPH_WINDOW_SHARING_LIST > ~/.config/hypr/sharinglist
 
 echo "[SELECTION]/screen:eDP-1"

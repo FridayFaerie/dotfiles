@@ -35,7 +35,8 @@ vim.opt.inccommand = 'split'
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
-vim.opt.cursorline = true
+-- TODO: change this
+vim.opt.cursorline = false
 
 -- Make line numbers default
 vim.wo.number = true
@@ -188,6 +189,8 @@ vim.keymap.set('n', '<M-o>', function()
 end, { noremap = true, silent = true, desc = 'QuickFix open' })
 
 vim.opt.virtualedit = 'all'
+
+vim.opt.cmdheight = 0
 
 
 -- Function to snap to the nearest line when entering insert mode

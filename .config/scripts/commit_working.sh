@@ -11,7 +11,7 @@ git merge working --squash &&
 
 git commit -m "${1}" &&
 
-git push &&
+git push
 
 git switch working &&
 
