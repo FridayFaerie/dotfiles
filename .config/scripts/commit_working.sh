@@ -16,3 +16,5 @@ git push
 git switch working &&
 
 git merge main -m "merged from main"
+
+git push

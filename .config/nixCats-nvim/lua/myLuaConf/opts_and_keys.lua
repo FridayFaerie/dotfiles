@@ -36,7 +36,7 @@ vim.opt.inccommand = 'split'
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 -- TODO: change this
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 
 -- Make line numbers default
 vim.wo.number = true
@@ -187,6 +187,7 @@ vim.keymap.set('n', '<M-o>', function()
     local action = qf_winid > 0 and 'cclose' or 'copen'
     vim.cmd('botright '..action)
 end, { noremap = true, silent = true, desc = 'QuickFix open' })
+
 
 vim.opt.virtualedit = 'all'
 

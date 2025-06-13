@@ -16,7 +16,7 @@ quickshell -p ~/projects/fantasice/quickshell/&
 # idle
 hypridle &
 
-# hyprsunset -t 4000 &
+hyprsunset -t 4000 &
 
 
 # bash ~/.config/scripts/switch_wallpaper.sh g2
