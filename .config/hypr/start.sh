@@ -1,17 +1,14 @@
 #!/usr/bin/env bash
 
+# the bar
+quickshell -p ~/projects/fantasice/quickshell/ --daemonize
+
 #wallpapers
 hyprpaper &
 
 #can add pkgs.networkmanagerapplet to packages
 nm-applet --indicator &
 
-# the bar
-quickshell -p ~/projects/fantasice/quickshell/&
-
-# notifs
-# quickshell -p ~/.config/quickshell/notifs/ &
-# swaync &
 
 # idle
 hypridle &

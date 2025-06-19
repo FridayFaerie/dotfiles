@@ -4,6 +4,7 @@
 alias ..="cd .."
 alias ...="cd ../.."
 alias q="exit"
+alias ls="eza --icons"
 alias resys="~/.config/scripts/resys.sh"
 alias rehome="~/.config/scripts/rehome.sh"
 alias reek="nh clean all"
