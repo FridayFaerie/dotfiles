@@ -13,6 +13,7 @@ alias flock="nix flake update && git add flake.lock && git commit -m \"updated f
 alias reformat="ffmpeg -i screenrecord.mp4 -c:v libx264 -b:v 1000k output.mp4"
 alias p="nix-shell -p"
 alias gitlog="git --no-pager log --exclude='refs/notes/*' --all --oneline --graph --show-notes -n 20"
+alias gitls="git --no-pager log --exclude='refs/notes/*' --oneline --graph --show-notes -n 20"
 alias wally="bash ~/.config/scripts/switch_wallpaper.sh"
 alias gitac="git add . && git commit -m"
 alias gitconfri="git config --local user.email 'faeriethe@gmail.com' && git config --local user.name 'Friday'"

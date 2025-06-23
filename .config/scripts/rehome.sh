@@ -3,7 +3,7 @@ cd ~/config
 nix fmt ./*
 
 git add . &&
-git commit -m "rebuilt home at $(date -u +'%H:%M:%S %d/%m/%Y %Z')"
+git commit -m "rebuilt home       at $(date -u +'%H:%M:%S %d/%m/%Y %Z')"
 
 if [[ "$USER" == "friday" ]]; then
   nh home switch /home/friday/config
