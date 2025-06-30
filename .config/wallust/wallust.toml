@@ -24,6 +24,7 @@ color_space = "lab"
 # harddark - harddark16 - harddarkcomp - harddarkcomp16
 # softdark - softdark16 - softdarkcomp - softdarkcomp16
 # softlight - softlight16 - softlightcomp - softlightcomp16
+# palette = "light16"
 palette = "dark16"
 
 
@@ -55,9 +56,9 @@ hypr.template = 'colors-hypr.conf'
 hypr.target = '~/.config/wallust/themes/hypr.conf'
 rofi.template = 'colors-rofi.rasi'
 rofi.target = '~/.config/wallust/themes/rofi.rasi'
-quickshell.template = 'colors-quickshell.qml'
-quickshell.target = '~/.config/quickshell/config/Colors.qml'
+# quickshell.template = 'colors-quickshell.qml'
+# quickshell.target = '~/.config/quickshell/config/Colors.qml'
 neopywal.template = 'colors-neopywal.vim'
 neopywal.target = '~/.cache/wal/colors-wal.vim'
-fantasy-quickshell.template = 'fantasy-quickshell.qml'
-fantasy-quickshell.target = '~/projects/fantasice/quickshell/config/Colors.qml'
+# fantasy-quickshell.template = 'fantasy-quickshell.qml'
+# fantasy-quickshell.target = '~/projects/fantasice/quickshell/config/Colors.qml'

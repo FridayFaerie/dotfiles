@@ -2,16 +2,15 @@
 -- if not require('nixCatsUtils').isNixCats then
 --   colorschemeName = 'onedark'
 -- end
--- -- Could I lazy load on colorscheme with lze?
--- -- sure. But I was going to call vim.cmd.colorscheme() during startup anyway
--- -- this is just an example, feel free to do a better job!
---
+-- Could I lazy load on colorscheme with lze?
+-- sure. But I was going to call vim.cmd.colorscheme() during startup anyway
+-- this is just an example, feel free to do a better job!
+
 -- vim.cmd.colorscheme(colorschemeName)
 
 
-require('onedark').setup {
-}
-require('onedark').load()
+-- require('onedark').setup { }
+-- require('onedark').load()
 
 require('neopywal').setup({
   use_wallust = false,
@@ -20,6 +19,8 @@ require('neopywal').setup({
 })
 -- /home/friday/.cache/wal/colors-wal.vim
 vim.cmd.colorscheme("neopywal")
+
+local colorschemeName = "neopywal"
 
 
 local ok, notify = pcall(require, "notify")
@@ -247,11 +248,11 @@ require('lze').load {
       require('lualine').setup {
         options = {
           -- icons_enabled = false,
-          -- theme = colorschemeName,
+          theme = colorschemeName,
           -- component_separators = '|',
           -- section_separators = '',
           icons_enabled = true,
-          theme = 'neopywal',
+          -- theme = 'neopywal',
           component_separators = { left = '', right = '' },
           section_separators = { left = '', right = '' },
           disabled_filetypes = {
