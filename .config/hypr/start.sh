@@ -5,7 +5,7 @@ quickshell -p ~/projects/fantasice/quickshell/ --daemonize
 # quickshell --daemonize
 
 #wallpapers
-hyprpaper > ~/log.log &
+hyprpaper &
 
 #can add pkgs.networkmanagerapplet to packages
 nm-applet --indicator &
@@ -17,8 +17,7 @@ hypridle &
 hyprsunset -t 4000 &
 
 
-# bash ~/.config/scripts/switch_wallpaper.sh g2
-bash ~/.config/scripts/switch_wallpaper.sh g6
+bash ~/.config/scripts/switch_wallpaper.sh g2
 
 
 # hyprctl setcursor swordcursor 32

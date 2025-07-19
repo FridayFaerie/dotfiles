@@ -121,10 +121,10 @@ require('lze').load {
     end,
     after = function(plugin)
       if require('nixCatsUtils').isNixCats then
-        for server_name, cfg in pairs(servers) do
           require('lspconfig').qmlls.setup({
             cmd = {"qmlls","-E"}
           })
+        for server_name, cfg in pairs(servers) do
           require('lspconfig')[server_name].setup({
             capabilities = require('myLuaConf.LSPs.caps-on_attach').get_capabilities(server_name),
             -- this line is interchangeable with the above LspAttach autocommand
