@@ -1,12 +1,98 @@
-[character]
-success_symbol = '[->](bold green)'
-error_symbol = '[->](bold red)'
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$gleam\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$quarto\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$typst\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$nats\
+$direnv\
+$env_var\
+$mise\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$status\
+$os\
+$container\
+$netns\
+$shell\
+$character"""
 
-[battery]
-disabled = true
-
-[[battery.display]]
-disabled = true
+[time]
+disabled = false
 
 [aws]
 symbol = "  "
@@ -14,8 +100,14 @@ symbol = "  "
 [buf]
 symbol = " "
 
+[bun]
+symbol = " "
+
 [c]
 symbol = " "
+
+[cpp]
+symbol = " "
 
 [cmake]
 symbol = " "
@@ -28,6 +120,9 @@ symbol = " "
 
 [dart]
 symbol = " "
+
+[deno]
+symbol = " "
 
 [directory]
 read_only = " 󰌾"
@@ -46,6 +141,9 @@ symbol = " "
 
 [fossil_branch]
 symbol = " "
+
+[gcloud]
+symbol = "  "
 
 [git_branch]
 symbol = " "
@@ -159,6 +257,9 @@ symbol = " "
 
 [pijul_channel]
 symbol = " "
+
+[pixi]
+symbol = "󰏗 "
 
 [python]
 symbol = " "
