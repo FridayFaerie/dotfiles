@@ -9,4 +9,4 @@ eval "$(starship init bash)"
 
 #fortune | clolcat
 #nitch
-clear && fastfetch
+clear
