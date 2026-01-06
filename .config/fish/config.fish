@@ -1,6 +1,6 @@
 function fish_greeting
     # eval (ssh-agent -c)
-	clear
+	# clear
 end
 bind "/" expand-abbr or self-insert
 
@@ -19,3 +19,6 @@ enable_transience
 zoxide init fish | source
 # if status is-interactive
 # end
+
+export LFS=/mnt/lfs
+umask 022
