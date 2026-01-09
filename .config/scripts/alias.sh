@@ -24,3 +24,4 @@ alias ter="cd ~/projects/ternary && shl"
 alias qsp="quickshell -p"
 alias notif="notify-send -i ~/home/friday/Downloads/FishMan.png 'New message' 'This is some message. \n\n\n here\'s another paragraph.' -p -h 'string:image-path:/home/friday/.config/wallpapers/a1' -t 3000 -i element"
 alias reboot="shutdown -r now"
+alias imv=imv-wayland
