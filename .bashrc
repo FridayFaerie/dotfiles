@@ -7,11 +7,13 @@ source ~/.config/scripts/alias.sh
 
 eval "$(starship init bash)"
 
+. "$HOME/.cargo/env"
 
 export LFS=/mnt/lfs
 umask 022
 
+# export TERM=xterm
+
 #fortune | clolcat
 #nitch
 clear
-. "$HOME/.cargo/env"

@@ -1,6 +1,7 @@
 function fish_greeting
     # eval (ssh-agent -c)
 	# clear
+	export TERM=xterm
 end
 bind "/" expand-abbr or self-insert
 
