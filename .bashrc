@@ -16,4 +16,4 @@ umask 022
 
 #fortune | clolcat
 #nitch
-clear
+# clear

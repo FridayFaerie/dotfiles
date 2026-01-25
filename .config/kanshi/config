@@ -5,3 +5,7 @@ profile {
 profile {
   output eDP-1 enable mode 1920x1080 position 0,1080 scale 1.333
 }
+profile {
+  output eDP-1 enable mode 1920x1080 position 0,1080 scale 1
+  output fake disable
+}
