@@ -17,5 +17,9 @@ starship init fish | source
 enable_transience
 
 zoxide init fish | source
+
+direnv hook fish | source
+
+
 # if status is-interactive
 # end
