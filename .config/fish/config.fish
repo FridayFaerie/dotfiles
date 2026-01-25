@@ -1,6 +1,7 @@
 function fish_greeting
     # eval (ssh-agent -c)
-	clear
+	# clear
+	export TERM=xterm
 end
 bind "/" expand-abbr or self-insert
 
@@ -23,3 +24,6 @@ direnv hook fish | source
 
 # if status is-interactive
 # end
+
+export LFS=/mnt/lfs
+umask 022
