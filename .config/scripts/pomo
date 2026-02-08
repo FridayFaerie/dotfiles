@@ -1,0 +1,24 @@
+#!/usr/bin/env fish
+
+set rest 5
+set work 25
+
+function note -a name
+  notify-send -t 5000 -u normal $name
+  ffplay -v quiet -autoexit -nodisp /usr/share/sounds/Oxygen-Im-Nudge.ogg;
+end
+
+function warn -a name
+  notify-send -t 5000 -u critical $name
+  ffplay -v quiet -autoexit -nodisp /usr/share/sounds/Oxygen-Im-Cant-Connect.ogg
+  ffplay -v quiet -autoexit -nodisp /usr/share/sounds/Oxygen-Im-Cant-Connect.ogg
+end
+
+while :
+  echo "playtime!"
+  note "time to play" "Oxygen-Im-Nudge"
+  sleep (math $rest x 60)
+  echo "workworkworkworkworkworkwork"
+  warn "WORK NOW!!" "Oxygen-Im-Cant-Connect"
+  sleep (math $work x 60)
+end

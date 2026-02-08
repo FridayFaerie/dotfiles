@@ -8,6 +8,7 @@
 #
 # Logo key. Use Mod1 for Alt. Mod4 for Meta
 set $mod Mod1
+set $altmod Mod1+Shift
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -34,7 +35,7 @@ output * bg /usr/share/wallpapers/JoyInksplat/contents/images/1920x1080.svg fill
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 
-  output DP-1 resolution 1920x1080 position 0,0 scale 1.2
+  output DP-1 resolution 1920x1080 position 0,0 scale 1.1
   output eDP-1 resolution 1920x1080 position 0,1080 scale 1.333
   # output DP-1 resolution 1920x1080 position 0,0 scale 1
   # output eDP-1 resolution 1920x1080 position 0,1080 scale 1
@@ -45,8 +46,10 @@ output * bg /usr/share/wallpapers/JoyInksplat/contents/images/1920x1080.svg fill
 exec kanshi
 exec wlsunset -t 5000
 exec /home/friday/.config/scripts/battery.fish
-exec swaync
+exec dunst
 exec autotiling
+exec qs
+exec thunderbird
 
 ### Idle configuration
 #
@@ -65,8 +68,9 @@ exec swayidle -w \
 #
 # Example configuration:
 #
+
 input "type:keyboard" {
-  xkb_options caps:none
+  xkb_options caps:none,compose:caps
 }
 input "1267:12637:ELAN0790:00_04F3:315D_Touchpad" {
     # dwt disabled
@@ -82,6 +86,7 @@ input "1133:49271:Logitech_USB_Optical_Mouse" {
     # accel_profile "flat" # disable mouse acceleration (enabled by default; to set it manually, use "adaptive" instead of "flat")
     pointer_accel 1.0 # set mouse sensitivity (between -1 and 1)
 }
+
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -95,13 +100,14 @@ input "1133:49271:Logitech_USB_Optical_Mouse" {
 
     # Kill focused window
     bindsym $mod+grave kill
-    bindsym Super+grave kill
 
     # Start your launcher
     bindsym $mod+r exec $menu
 
+    bindsym $mod+space exec qs ipc call panel toggle
+
     bindsym $mod+b exec $browser
-    bindsym $mod+Shift+b exec $browser --private-window
+    bindsym $altmod+b exec $browser --private-window
 
 
     # Drag floating windows by holding down $mod and left mouse button.
@@ -115,8 +121,9 @@ input "1133:49271:Logitech_USB_Optical_Mouse" {
     bindsym $mod+n reload
 
     # Exit sway (logs you out of your Wayland session)
-    # bindsym $mod+Shift+m exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-    bindsym $mod+Shift+m exec swaymsg exit
+    # bindsym $altmod+m exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $altmod+m exec swaymsg exit
+    bindsym Ctrl+$altmod+m exec systemctl poweroff
 #
 # Moving around:
 #
@@ -132,15 +139,15 @@ input "1133:49271:Logitech_USB_Optical_Mouse" {
     # bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    bindsym $altmod+$left move left
+    bindsym $altmod+$down move down
+    bindsym $altmod+$up move up
+    bindsym $altmod+$right move right
     # Ditto, with arrow keys
-    # bindsym $mod+Shift+Left move left
-    # bindsym $mod+Shift+Down move down
-    # bindsym $mod+Shift+Up move up
-    # bindsym $mod+Shift+Right move right
+    # bindsym $altmod+Left move left
+    # bindsym $altmod+Down move down
+    # bindsym $altmod+Up move up
+    # bindsym $altmod+Right move right
 #
 # Workspaces:
 #
@@ -150,12 +157,18 @@ input "1133:49271:Logitech_USB_Optical_Mouse" {
     bindsym $mod+a workspace number 4
     bindsym $mod+s workspace number 5
     bindsym $mod+d workspace number 6
-    bindsym $mod+Shift+q move container to workspace number 1
-    bindsym $mod+Shift+w move container to workspace number 2
-    bindsym $mod+Shift+e move container to workspace number 3
-    bindsym $mod+Shift+a move container to workspace number 4
-    bindsym $mod+Shift+s move container to workspace number 5
-    bindsym $mod+Shift+d move container to workspace number 6
+    bindsym $mod+i workspace number 7
+    bindsym $mod+o workspace number 8
+    bindsym $mod+p workspace number 9
+    bindsym $altmod+q move container to workspace number 1; workspace number 1
+    bindsym $altmod+w move container to workspace number 2; workspace number 2
+    bindsym $altmod+e move container to workspace number 3; workspace number 3
+    bindsym $altmod+a move container to workspace number 4; workspace number 4
+    bindsym $altmod+s move container to workspace number 5; workspace number 5
+    bindsym $altmod+d move container to workspace number 6; workspace number 6
+    bindsym $altmod+i move container to workspace number 7; workspace number 7
+    bindsym $altmod+o move container to workspace number 8; workspace number 8
+    bindsym $altmod+p move container to workspace number 9; workspace number 9
     # # Switch to workspace
     # bindsym $mod+1 workspace number 1
     # bindsym $mod+2 workspace number 2
@@ -168,16 +181,16 @@ input "1133:49271:Logitech_USB_Optical_Mouse" {
     # bindsym $mod+9 workspace number 9
     # bindsym $mod+0 workspace number 10
     # # Move focused container to workspace
-    # bindsym $mod+Shift+1 move container to workspace number 1
-    # bindsym $mod+Shift+2 move container to workspace number 2
-    # bindsym $mod+Shift+3 move container to workspace number 3
-    # bindsym $mod+Shift+4 move container to workspace number 4
-    # bindsym $mod+Shift+5 move container to workspace number 5
-    # bindsym $mod+Shift+6 move container to workspace number 6
-    # bindsym $mod+Shift+7 move container to workspace number 7
-    # bindsym $mod+Shift+8 move container to workspace number 8
-    # bindsym $mod+Shift+9 move container to workspace number 9
-    # bindsym $mod+Shift+0 move container to workspace number 10
+    # bindsym $altmod+1 move container to workspace number 1
+    # bindsym $altmod+2 move container to workspace number 2
+    # bindsym $altmod+3 move container to workspace number 3
+    # bindsym $altmod+4 move container to workspace number 4
+    # bindsym $altmod+5 move container to workspace number 5
+    # bindsym $altmod+6 move container to workspace number 6
+    # bindsym $altmod+7 move container to workspace number 7
+    # bindsym $altmod+8 move container to workspace number 8
+    # bindsym $altmod+9 move container to workspace number 9
+    # bindsym $altmod+0 move container to workspace number 10
     # # Note: workspaces can have any name you want, not just numbers.
     # # We just use 1-10 as the default.
 #
@@ -190,7 +203,7 @@ input "1133:49271:Logitech_USB_Optical_Mouse" {
     # bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+z layout stacking
+    # bindsym $mod+z layout stacking
     bindsym $mod+x layout tabbed
     bindsym $mod+c layout toggle split
 
@@ -200,7 +213,7 @@ input "1133:49271:Logitech_USB_Optical_Mouse" {
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+v floating toggle
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+Shift+v focus mode_toggle
+    bindsym $altmod+v focus mode_toggle
 
     # Move focus to the parent container
     # bindsym $mod+a focus parent
@@ -211,7 +224,7 @@ input "1133:49271:Logitech_USB_Optical_Mouse" {
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+    bindsym $altmod+minus move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
@@ -238,8 +251,11 @@ mode "resize" {
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
+    bindsym $mod+z mode "default"
 }
-    bindsym $mod+Shift+R mode "resize"
+    # bindsym $altmod+R mode "resize"
+    bindsym $mod+z mode "resize"
+
 
 # Utilities:
 #
@@ -256,29 +272,33 @@ mode "resize" {
     # bindsym Print exec grimshot copy area
     bindsym Print exec grim -g "$(slurp)" - | wl-copy
     bindsym Shift+Print exec filename=~/Pictures/Screenshots/$(date +"%F_%Hh%Mm%Ss").png && grim "$filename" && wl-copy < "$filename" 
+    bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" "/tmp/screenshot.png" && swaymsg workspace "screenshot" && cp ~/.config/scripts/screenshot.typ /tmp/screenshot.typ && foot -a "screenshot" /usr/bin/fish -c "nvim /tmp/screenshot.typ -c TypstPreview"
 
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    height 18
-    position bottom
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    # status_command while date +'%d/%m/%Y %H:%M'; do sleep 60; done
-    status_command while true; do echo $(date +'%d/%m/%Y %H:%M') $(cat /sys/class/power_supply/BAT0/capacity)'%'; sleep 60; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+# bar {
+#     height 18
+#     position bottom
+#
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     # status_command while date +'%d/%m/%Y %H:%M'; do sleep 60; done
+#     status_command while true; do echo $(date +'%d/%m/%Y %H:%M') $(cat /sys/class/power_supply/BAT0/capacity)'%'; sleep 60; done
+#
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#     }
+# }
 
 for_window [class="^.*"] border none
 for_window [title="Figure.*"] floating enable
+
+assign [app_id="thunderbird"] number 9
+assign [app_id="screenshot"] "screenshot"
 
 
 include /etc/sway/config.d/*
