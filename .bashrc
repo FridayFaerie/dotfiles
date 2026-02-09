@@ -13,4 +13,4 @@ alias oxarm="cd ~/oxarm/RobotArmPackages2/ && source /opt/ros/jazzy/setup.bash &
 
 #fortune | clolcat
 #nitch
-clear
+# clear
