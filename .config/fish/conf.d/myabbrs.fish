@@ -8,6 +8,9 @@ abbr -a -- cd 'z'
 # abbr -a -- matlab 'matlab & disown && sleep 10; exit'
 abbr -a -- c 'nvim ~/.config/'
 abbr -a -- tp 'nvim -c TypstPreview'
+abbr -a -- rm 'trash-put'
+abbr -a -- cat 'bat'
+abbr -a -- ls 'eza --icons'
 
 # Source - https://stackoverflow.com/a
 # Posted by Dave Powers
