@@ -79,7 +79,7 @@ tooltip label{
     /* background: @background; */
     opacity: 0.8;
     padding: 0px 10px;
-    margin: 10px 0px;
+    margin: 5px 0px;
     margin-bottom: 5px;
     border: 0px;
     border-style: solid;
@@ -145,7 +145,7 @@ tooltip label{
     color: @color12;
 }
 
-#pulseaudio,#memory {
+#pulseaudio,#memory,#clock {
         color: @color13;
 }
 

@@ -21,3 +21,6 @@ source ~/oxarm/robot/setup.sh
 popd
 
 clear
+#fortune | clolcat
+#nitch
+# clear
