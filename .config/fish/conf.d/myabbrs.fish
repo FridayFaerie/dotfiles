@@ -10,7 +10,8 @@ abbr -a -- c 'nvim ~/.config/'
 abbr -a -- tp 'nvim -c TypstPreview'
 abbr -a -- rm 'trash-put'
 abbr -a -- cat 'bat'
-abbr -a -- ls 'eza --icons'
+# abbr -a -- ls 'eza --icons'
+abbr -a -- jjlog 'jj log -r "all()" --reversed --no-pager'
 
 # Source - https://stackoverflow.com/a
 # Posted by Dave Powers
