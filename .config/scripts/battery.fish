@@ -5,6 +5,10 @@ if test (count (pidof batteryscript -d \n)) -gt 1;
   exit
 end
 
+if test -e /tmp/ignore-high-battery;
+  rm /tmp/ignore-high-battery;
+end
+
 set long 300
 set short 60
 set timer $long
@@ -22,7 +26,7 @@ while :
     set timer $short
   else if test $battery -ge 90 && string match -v $batteryStatus "Discharging";
     echo "high bat detected"
-    if test ! -e ~/.config/scripts/ignore-high-battery;
+    if test ! -e /tmp/ignore-high-battery;
       echo "sending high bat notif"
       notify-send -u normal -t 5000 "High Battery" "Please disconnect!"
       ffplay -autoexit -nodisp /usr/share/sounds/Oxygen-Sys-App-Error.ogg
