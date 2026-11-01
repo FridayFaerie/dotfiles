@@ -1,15 +1,11 @@
-profile {
+profile dp {
   output DP-1 mode 1920x1080 position 0,0 scale 1
   output eDP-1 disable
 }
-profile {
+profile hdmi {
   output eDP-1 disable
-  output HDMI-A-1 1920x1080 position 0,0 scale 1
+  output HDMI-A-1 mode 1920x1080 position 0,0 scale 3
 }
-profile {
+profile edp {
   output eDP-1 enable mode 1920x1080 position 0,0 scale 1.5
-}
-profile {
-  output eDP-1 enable mode 1920x1080 position 0,0 scale 1
-  output fake disable
 }

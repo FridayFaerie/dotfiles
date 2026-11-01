@@ -5,10 +5,6 @@
 # aliases
 source ~/.config/scripts/alias.sh
 
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
 
-# eval "$(direnv hook bash)"
-
-#fortune | clolcat
-#nitch
-# clear
+#eval "$(zoxide init bash)"

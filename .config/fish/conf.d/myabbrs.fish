@@ -9,14 +9,18 @@ abbr -a -- n 'nvim'
 abbr -a -- c 'nvim ~/.config/'
 abbr -a -- tp 'nvim -c TypstPreview'
 abbr -a -- rm 'trash-put'
-abbr -a -- cat 'batcat'
+abbr -a -- remove 'rm'
+abbr -a -- cat 'bat -P'
 # abbr -a -- ls 'eza --icons'
 abbr -a -- jjlog 'jj log -r "all()" --reversed --no-pager -n 70'
+abbr -a -- jjdiff 'jj diff'
+abbr -a -- jjd 'jj describe -m'
+
 abbr -a -- lsblk 'lsblk -o name,label,mountpoint,uuid,FSUSE%,size'
-abbr -a -- cal 'ncal -b'
+# abbr -a -- cal 'ncal -b'
 
 abbr -a -- view 'nvim -R'
-abbr -a -- diff 'vimdiff'
+abbr -a -- diff 'nvim -d'
 
 # Source - https://stackoverflow.com/a
 # Posted by Dave Powers
